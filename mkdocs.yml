@@ -1,0 +1,56 @@
+site_name: 灵动微电子生态资料中心
+site_url: http://192.168.105.192:1111/
+copyright: © Copyright 2024, 上海灵动微电子股份有限公司 http://www.mindmotion.com.cn/
+
+nav:
+  - 关于灵动微电子:
+    - 项目简介: index.md
+    - 公司官网: https://www.mindmotion.com.cn/
+  - 软件开发套件: 
+    - MM32F系列: MM32F系列软件开发套件.md
+    - MM32G系列: MM32G系列软件开发套件.md
+    - MM32L系列: MM32L系列软件开发套件.md
+    - MM32A系列: MM32A系列软件开发套件.md
+    - MM32SPIN系列: MM32SPIN系列软件开发套件.md
+    - MM32W系列: MM32W系列软件开发套件.md
+  - 应用笔记:
+    - 芯片勘误表: ./应用笔记/芯片勘误表.md
+    - CANopenNode移植: ./应用笔记/基于MM32G5330移植CANopenNode协议栈/基于MM32G5330移植CANopenNode协议栈.md
+    - LwIP移植: ./应用笔记/LwIP移植笔记/LwIP移植笔记.md
+    - TinyUSB移植: ./应用笔记/基于Mini-F5277-OB移植TinyUSB协议栈/基于Mini-F5277-OB移植TinyUSB协议栈.md    
+  - 汽车电子软件: 
+    - 例程1: ComingSoon.md
+    - 例程2: ComingSoon.md
+    - 例程3: ComingSoon.md  
+  - 开发工具:
+    - 工具1: ComingSoon.md
+    - 工具2: ComingSoon.md
+  - 认证资质: 
+    - 资质1: ComingSoon.md
+    - 资质2: ComingSoon.md
+    - 资质3: ComingSoon.md
+
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - rust
+  locale: en
+  include_homepage_in_sidebar: true
+  prev_next_buttons_location: bottom #top both none
+  navigation_depth: 3
+  collapse_navigation: True
+  titles_only: False
+  sticky_navigation: true
+  logo: ./img/logo.png
+  #include_sidebar: true
+ 
+
+#extra:
+  #version: V1.0.0
+
+
+extra_css:
+  - style.css
+

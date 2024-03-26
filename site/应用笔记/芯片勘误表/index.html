@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="http://192.168.105.192:1111/%E5%BA%94%E7%94%A8%E7%AC%94%E8%AE%B0/%E8%8A%AF%E7%89%87%E5%8B%98%E8%AF%AF%E8%A1%A8/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>芯片勘误表 - 灵动微电子生态资料中心</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u82af\u7247\u52d8\u8bef\u8868";
+        var mkdocs_page_input_path = "\u5e94\u7528\u7b14\u8bb0\\\u82af\u7247\u52d8\u8bef\u8868.md";
+        var mkdocs_page_url = "/%E5%BA%94%E7%94%A8%E7%AC%94%E8%AE%B0/%E8%8A%AF%E7%89%87%E5%8B%98%E8%AF%AF%E8%A1%A8/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../..">
+          <img src="../../img/logo.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">关于灵动微电子</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">项目简介</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="https://www.mindmotion.com.cn/">公司官网</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">软件开发套件</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../MM32F%E7%B3%BB%E5%88%97%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%A5%97%E4%BB%B6/">MM32F系列</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../MM32G%E7%B3%BB%E5%88%97%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%A5%97%E4%BB%B6/">MM32G系列</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../MM32L%E7%B3%BB%E5%88%97%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%A5%97%E4%BB%B6/">MM32L系列</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../MM32A%E7%B3%BB%E5%88%97%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%A5%97%E4%BB%B6/">MM32A系列</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../MM32SPIN%E7%B3%BB%E5%88%97%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%A5%97%E4%BB%B6/">MM32SPIN系列</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../MM32W%E7%B3%BB%E5%88%97%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%A5%97%E4%BB%B6/">MM32W系列</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">应用笔记</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">芯片勘误表</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#flexcan">FlexCAN</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#err005829-flexcan">ERR005829  FlexCAN不传输在仲裁过程中的特定时刻启用传输的消息</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#err006032-canidcan">ERR006032  当CAN总线处于总线空闲状态时，正在传输的消息缓冲区中止或停用时，具有错误ID或有效负载的帧被传输到CAN总线中</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#err009527">ERR009527 传输中止机制可能无法正常工作</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#err009595">ERR009595 如果在总线关闭状态下进入冻结模式或低功耗模式，则帧可能损坏</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#adc">ADC</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_14">错误号</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_15">错误号</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bkp">BKP</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_16">错误号</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_17">错误号</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#crc">CRC</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_18">错误号</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_19">错误号</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dbg">DBG</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_20">错误号</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_21">错误号</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E5%9F%BA%E4%BA%8EMM32G5330%E7%A7%BB%E6%A4%8DCANopenNode%E5%8D%8F%E8%AE%AE%E6%A0%88/%E5%9F%BA%E4%BA%8EMM32G5330%E7%A7%BB%E6%A4%8DCANopenNode%E5%8D%8F%E8%AE%AE%E6%A0%88/">CANopenNode移植</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LwIP%E7%A7%BB%E6%A4%8D%E7%AC%94%E8%AE%B0/LwIP%E7%A7%BB%E6%A4%8D%E7%AC%94%E8%AE%B0/">LwIP移植</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../%E5%9F%BA%E4%BA%8EMini-F5277-OB%E7%A7%BB%E6%A4%8DTinyUSB%E5%8D%8F%E8%AE%AE%E6%A0%88/%E5%9F%BA%E4%BA%8EMini-F5277-OB%E7%A7%BB%E6%A4%8DTinyUSB%E5%8D%8F%E8%AE%AE%E6%A0%88/">TinyUSB移植</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">汽车电子软件</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ComingSoon/">例程1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ComingSoon/">例程2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ComingSoon/">例程3</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">开发工具</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ComingSoon/">工具1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ComingSoon/">工具2</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">认证资质</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ComingSoon/">资质1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ComingSoon/">资质2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ComingSoon/">资质3</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">灵动微电子生态资料中心</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">应用笔记</li>
+      <li class="breadcrumb-item active">芯片勘误表</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">芯片勘误表</h1>
+<h2 id="flexcan">FlexCAN</h2>
+<h3 id="err005829-flexcan">ERR005829  FlexCAN不传输在仲裁过程中的特定时刻启用传输的消息</h3>
+<h4 id="_2">描述</h4>
+<p>FlexCAN不传输在仲裁过程中的特定时刻启用传输的消息。出现该问题需要满足以下条件:<br />
+•只配置一个消息缓冲区来传输<br />
+•在仲裁过程中的特定时钟期间，使消息缓冲区能够传输的写操作(写在控制/状态字上)发生。<br />
+•在此仲裁过程发生后，总线进入Idle状态，并且总线上没有收到新消息。  </p>
+<p>例如:<br />
+1. 消息缓冲区13在RxIntermission上被停用(将0x0写入CODE字段)
+控制/状态字)[先写入CODE]<br />
+2. 重新配置ID和data字段<br />
+3. 启用消息缓冲区13在BusIdle上传输(在CODE字段上写0xC)[第二次写入CODE]<br />
+4. CAN总线保持在空闲状态<br />
+5. 没有从任何消息缓冲区写入控制/状态。 </p>
+<p>在第二次写入CODE(步骤3)期间，写入必须在仲裁进程扫描当前消息缓冲区13之前一个时钟发生。在本例中，它不检测新代码
+(0xC)并且没有安排新的仲裁。<br />
+只有当消息流量停止并且can总线在上述事件序列之后进入Idle状态时，才能检测到问题。<br />
+如果符合以下任何条件，则没有问题:<br />
+•任何消息缓冲区(Tx或Rx)都被重新配置(通过写入其CS字段)
+幕间休息。<br />
+•有其他配置的消息缓冲区要传输。<br />
+•任何外部节点发送的新传入消息在中场休息字段之后开始。   </p>
+<h4 id="_3">受影响芯片</h4>
+<p>芯片1 芯片2 芯片3</p>
+<h4 id="_4">解决办法</h4>
+<p>要传输CAN帧，CPU必须通过执行以下标准的5个步骤以生成用于传输的消息缓冲区：<br />
+1. 检查是否设置了相应的中断位并清除它<br />
+2. 如果消息缓冲区处于活动状态（传输挂起），请将中止代码（0b1001）写入控制/状态字的CODE字段，以请求中止传输。通过轮询IFLAG寄存器或中断请求（如果由相应的IMASK启用）来等待断言相应的IFLAG。然后读回CODE字段以检查传输是否已中止或已传输。如果需要向后兼容（MCR[AEN]位被否定），只需将非活动代码（0b1000）写入CODE字段以停用消息缓冲区，但随后可能会在不通知的情况下传输挂起的帧。<br />
+3. 写ID字<br />
+4. 写入数据字节<br />
+5. 写入控制/状态字的DLC、Control和CODE字段以激活消息缓冲区<br />
+6. 该解决方法包括执行两个额外的步骤：<br />
+7. 将第一个有效邮箱保留为非活动邮箱（CODE = 0b1000）。如果禁用了RX FIFO，则此邮箱必须是邮件缓冲区0。否则，可以使用芯片参考手册FlexCAN章节中的“RX FIFO滤波器”表找到第一个有效邮箱<br />
+8. 将两次非活动代码（0b1000）写入第一个有效邮箱  </p>
+<h3 id="err006032-canidcan">ERR006032  当CAN总线处于总线空闲状态时，正在传输的消息缓冲区中止或停用时，具有错误ID或有效负载的帧被传输到CAN总线中</h3>
+<h4 id="_5">描述</h4>
+<p>如果在FlexCAN处于总线空闲状态时配置了一个或多个消息缓冲区（MB）进行传输，并且选择传输的MB在开始传输的确切时刻被中止或停用，则FlexCAN模块可能会传输不正确的信息。这将导致FlexCAN发送语法正确的消息，但使用不正确的ID或数据字段。CRC信息将基于不正确的数据（以防数据受到影响）进行计算，且帧中的所有其他字段都将是正确的。<br />
+在传输一帧时，问题发生的概率仅限于一个CAN位，在非常特定的多起事件组合下：<br />
+1. Bug事件可能发生在每帧一个特定的CAN位中<br />
+2. CAN总线必须处于总线空闲状态<br />
+3. 必须触发CPU以配置一个或多个MB以在总线空闲状态下进行传输  <br />
+4. 在步骤3中开始配置的短时间内，必须触发CPU，通过停用删除刚刚配置的 MB。  </p>
+<p>综上所述，发生的概率非常低，大约为1/1000万。此外，在正常应用中不太可能发生配置MB，然后在短时间内停用相同MB的过程。<br />
+在实践中，如果CPU保证传输配置的任何MB将在下一帧中止或停用，则没有问题  </p>
+<h4 id="_6">受影响芯片</h4>
+<p>芯片1 芯片2 芯片3</p>
+<h4 id="_7">解决办法</h4>
+<p>当CAN总线处于总线空闲状态时，用户可以通过阻止对传输进行MB配置来避免该错误。FlexCAN调试寄存器中有一些位可用于确定CAN总线何时处于空闲状态。
+该调试寄存器位于：FlexCAN调试1寄存器（CAN_DBG1）- Base + 0x0058。CAN_DBG1寄存器的CAN有限状态机（CFSM）位监控FlexCAN的内部状态。CFSM是CAN_DBG1寄存器中六个最低位。CAN位数（CBN）是CAN_DBG1寄存器中bit位3至7处的五位长字段，用于指示给定CFSM状态值中的当前位数。<br />
+CAN_DBG1.CFSM = 0x0000_003F <br />
+CAN_DBG1.CBN = 0x1F00_0000<br />
+需要查找几个内部状态值，下面列出了它们相应的CFSM值
+RXINTERMISSION - 0x2F<br />
+TXINTERMISSION - 0x14 <br />
+BUSIDLE - 0x02  </p>
+<p>必须执行以下过程来配置MB传输：<br />
+1. 禁用所有中断<br />
+2. 读取CAN_DBG1.CFSM和CAN_DBG1.CBN字段<br />
+3. 检查CFSM值是否为BUSIDLE、RXINTERMISSION或TXINTERMISSION<br />
+对于后两个值，还要检查CBN值是否为3，以确定配对条件RXINTERMISSION bit 3或TXINTERMISSION bit 3，并按如下所述进行处理。<br />
+3.1 如果CAN_DBG1字段指示 BUSIDLE，则等待N个CPU时钟<br />
+3.2 否则，若CAN_DBG1如果字段指示RXINTERMISSION位3或TXINTERMISSION位3，则等待CFSM与RXINTERMISSION或TXINTERMISSION不同<br />
+4. 将0x0写入CS字的代码字段<br />
+5. 使能所有中断<br />
+6. 写入ID字<br />
+7. 写入DATA字<br />
+8. 将0xC写入CS字的代码字段  </p>
+<h3 id="err009527">ERR009527 传输中止机制可能无法正常工作</h3>
+<h4 id="_8">描述</h4>
+<p>灵活控制器局域网（FlexCAN）无法中止传输帧，在以下情况下，中止过程可能保持待定状态：<br />
+1. 如果在FlexCAN接收远程帧时发生挂起的中止请求<br />
+2. 当帧在帧接收后的重载帧期间中止时<br />
+3. 当FlexCAN刚刚开始传输时就请求中止<br />
+4. 当发生冻结模式请求且FlexCAN刚刚开始传输时  </p>
+<h4 id="_9">受影响芯片</h4>
+<p>芯片1 芯片2 芯片3</p>
+<h4 id="_10">解决办法</h4>
+<p>使用邮箱停用机制而不是传输中止机制。模块配置寄存器的中止使能（AEN）位可以保持清除状态，并且中止代码值“0b1001”不能被写入消息缓冲区控制和状态字的CODE字段。  </p>
+<h3 id="err009595">ERR009595 如果在总线关闭状态下进入冻结模式或低功耗模式，则帧可能损坏</h3>
+<h4 id="_11">描述</h4>
+<p>如果模块配置寄存器（MCR）的冻结使能位（FRZ）被置位，并且在总线关闭状态期间通过置位MCR寄存器的停止位（HALT）来请求冻结模式，则退出总线关闭条件后的传输将被损坏。仅当传输在冻结模式请求之前处于挂起状态时，才会出现此问题。此外，如果请求低功耗模式而不是冻结模式，也会出现同样的问题。  </p>
+<h4 id="_12">受影响芯片</h4>
+<p>芯片1 芯片2 芯片3</p>
+<h4 id="_13">解决办法</h4>
+<p>解决方法取决于在请求冻结模式或低功耗模式之前是否发生Bus-Off条件。<br />
+进入冻结模式的过程：<br />
+1. 在模块控制寄存器（MCR）中置位冻结使能位（FRZ）<br />
+2. 检查MCR寄存器的模块禁用位（MDIS）是否置位。如果置位，清除MDIS位<br />
+3. 轮询MCR寄存器，直到MCR中的低功耗模式确认（LPMACK）位被清除（软件实现的超时为两个CAN位长度）<br />
+4. 读取错误和状态1寄存器（ESR1）中的故障限制状态（FLTCONF）字段，以检查FlexCAN是否处于总线关闭状态。如果是，请转到步骤5A。否则，请转到步骤5B。
+5A.  置位MCR寄存器的软件复位位（（SOFTRST）<br />
+6A.  轮询MCR寄存器，直到软件复位（SOFTRST）位被清除（软件实现的超时为两个CAN位长度<br />
+7A.  轮询MCR寄存器，直到置位冻结确认（FRZACK）位（软件实现的超时为两个CAN位长度）<br />
+8A.  重新配置MCR寄存器<br />
+9A.  重新配置所有中断掩码寄存器（IMASKn）  </p>
+<p>5B.  置位MCR寄存器的Halt FlexCAN（HALT）位<br />
+6B.  轮询MCR寄存器，直到置位冻结确认（FRZACK）位（软件实现的超时为178个CAN位长度）<br />
+Note！步骤4和步骤5B之间的时间必须小于1353个CAN位周期。  </p>
+<p>进入低功耗模式的步骤：<br />
+1. 进入冻结模式（执行过程 A）<br />
+2. 请求低功耗模式<br />
+3. 轮询MCR寄存器，直到MCR寄存器的低功耗模式确认（LPMACK）位被置1（软件实现的超时为两个CAN位长度）  </p>
+<h2 id="adc">ADC</h2>
+<h3 id="_14">错误号</h3>
+<h3 id="_15">错误号</h3>
+<h2 id="bkp">BKP</h2>
+<h3 id="_16">错误号</h3>
+<h3 id="_17">错误号</h3>
+<h2 id="crc">CRC</h2>
+<h3 id="_18">错误号</h3>
+<h3 id="_19">错误号</h3>
+<h2 id="dbg">DBG</h2>
+<h3 id="_20">错误号</h3>
+<h3 id="_21">错误号</h3>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../MM32W%E7%B3%BB%E5%88%97%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%A5%97%E4%BB%B6/" class="btn btn-neutral float-left" title="MM32W系列"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../%E5%9F%BA%E4%BA%8EMM32G5330%E7%A7%BB%E6%A4%8DCANopenNode%E5%8D%8F%E8%AE%AE%E6%A0%88/%E5%9F%BA%E4%BA%8EMM32G5330%E7%A7%BB%E6%A4%8DCANopenNode%E5%8D%8F%E8%AE%AE%E6%A0%88/" class="btn btn-neutral float-right" title="CANopenNode移植">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>© Copyright 2024, 上海灵动微电子股份有限公司 http://www.mindmotion.com.cn/</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../MM32W%E7%B3%BB%E5%88%97%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%A5%97%E4%BB%B6/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../%E5%9F%BA%E4%BA%8EMM32G5330%E7%A7%BB%E6%A4%8DCANopenNode%E5%8D%8F%E8%AE%AE%E6%A0%88/%E5%9F%BA%E4%BA%8EMM32G5330%E7%A7%BB%E6%A4%8DCANopenNode%E5%8D%8F%E8%AE%AE%E6%A0%88/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
